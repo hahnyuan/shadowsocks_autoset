@@ -1,8 +1,12 @@
 # coding=utf-8
+# Please put this file in your shadowsocks root direction
+
 import json
 import urllib
 import re
-import os
+import os,sys
+
+os.chdir(sys.path[0])
 
 server_name='usa.iss.tf'
 url='http://www.ishadowsocks.net/'
@@ -32,8 +36,13 @@ def find_pass(lines):
     return 0,0
 passwd,port=find_pass(lines)
 assert passwd!=0 ,'cannot get passwd'
-f=open('gui-config.json').read()
-data=json.loads(f)
+
+if not os.path.isfile('gui-config.json'):
+    f=open('gui-config.json','w')
+    f.write('{"configs" : []}')
+    f.close()
+conf=open('gui-config.json').read()
+data=json.loads(conf)
 
 is_init=0
 for i in data['configs']:
