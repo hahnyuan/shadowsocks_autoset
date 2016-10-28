@@ -8,7 +8,7 @@ import os,sys
 
 os.chdir(sys.path[0])
 
-server_name='usa.iss.tf'
+server_name='A服务器'
 url='http://www.ishadowsocks.net/'
 code='utf-8'
 
