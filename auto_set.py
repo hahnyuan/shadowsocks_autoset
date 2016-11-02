@@ -35,6 +35,8 @@ def find_pass(lines):
         if passwd and port:
             result_list.append((host_name, passwd, port))
             ok = 0
+            passwd=0
+            port=0
             host_name = ''
     return result_list
 
@@ -61,4 +63,4 @@ s = json.dumps(data,indent=3)
 f = open('gui-config.json', 'w')
 f.write(s)
 f.close()
-os.systemtem('Shadowsocks.exe')
+os.system('Shadowsocks.exe')
