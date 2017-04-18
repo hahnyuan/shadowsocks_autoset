@@ -4,8 +4,8 @@ import urllib
 import re
 import os
 
-server_name = '服务器地址:'
-url = 'http://www.ishadowsocks.net/'
+server_name = 'IP地址:'
+url = 'http://free.ishadow.online/index_cn.html'
 code = 'utf-8'
 
 u = urllib.urlopen(url)
@@ -21,15 +21,15 @@ def find_pass(lines):
         if not re.search(server_name, line) and ok == 0:
             continue
         if host_name == '':
-            host_name = re.findall(':([\w\.]*)<', line)[0]
+            host_name = re.findall(':.*?>([\w\.]*)<', line)[0]
             
         ok = 1
         if '端口' in line:
-            rst = re.findall(':(\d*)', line)
+            rst = re.findall('：(\d*)', line)
             
             port = rst[0]
         if '密码' in line:
-            rst = re.findall(':(\d*)', line)
+            rst = re.findall(':.*?>([\d]*)<', line)
             if len(rst)==0:
                 print("WARNING:the passwd \"%s\" is not set, please don't use it!"%host_name)
                 ok = 0
@@ -72,4 +72,5 @@ s = json.dumps(data,indent=3)
 f = open('gui-config.json', 'w')
 f.write(s)
 f.close()
-os.system('Shadowsocks.exe')
+os.system('start Shadowsocks.exe')
+
