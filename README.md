@@ -1,5 +1,5 @@
 This is a python 2.7 script for shadowsocks to auto get passwd on http://free.ishadow.online.
-Because the passwd will change every hours, you can run this script when the passwd changed without annoying website visiting. 
+Because the passwd will change every 6 hours, you can run this script when the passwd changed without annoying website visiting. 
 
 ## Requirement
 The shadowsocks windows GUI, which could be get from https://github.com/netroby/shadowsocks-gui-for-windows
