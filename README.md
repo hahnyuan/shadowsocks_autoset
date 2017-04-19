@@ -2,12 +2,16 @@ This is a python 2.7 script for shadowsocks to auto get passwd on http://free.is
 Because the passwd will change every 6 hours, you can run this script when the passwd changed without annoying website visiting. 
 
 ## Requirement
-The shadowsocks windows GUI, which could be get from https://github.com/netroby/shadowsocks-gui-for-windows
+1. The shadowsocks windows GUI, which could be get from https://github.com/shadowsocks/shadowsocks-windows/releases
+2. Python2.7
 
 ## Install
-1. If you have never run the shadowsocks.exe before, run the shadowsocks.exe to auto-generate the .json file.
-2. Putting the auto_set.py in the shadowsocks install direction.
+Putting the auto_set.py in the shadowsocks install direction.
 
 ## Usage
-1. Runing the auto_set.py with python2.7
-2. Restart the shadowsocks.exe
+1. Closing the shadowsocks.exe.
+2. Runing the auto_set.py with python2.7.
+3. The shadowsocks.exe will be open automatically.
+
+## Website change
+If the error the web page changed, please comment it at https://github.com/hahnyuan/shadowsocks_autoset/issues/2.
