@@ -1,3 +1,5 @@
+NOTICE: The ishadowsocks website's URL change irregularly. I have no idea to track its url, please change it manuly if this code not work.
+
 This is a python 2.7 script for shadowsocks to auto get passwd on http://free.ishadow.online.
 Because the passwd will change every 6 hours, you can run this script when the passwd changed without annoying website visiting. 
 
